@@ -14,15 +14,15 @@
   "scripts": {
     "test": "aegir test",
     "test:node": "aegir test -t node",
-    "test:browser": "node --max-old-space-size=8192 $(npm bin)/aegir test -t browser",
-    "test:webworker": "node --max-old-space-size=8192 $(npm bin)/aegir test -t webworker",
+    "test:browser": "aegir test -t browser",
+    "test:webworker": "aegir test -t webworker",
     "lint": "aegir lint",
     "build": "aegir build",
-    "release": "node --max-old-space-size=8192 $(npm bin)/aegir release ",
-    "release-minor": "node --max-old-space-size=8192 $(npm bin)/aegir release --type minor ",
-    "release-major": "node --max-old-space-size=8192 $(npm bin)/aegir release --type major ",
-    "coverage": "node --max-old-space-size=8192 $(npm bin)/aegir coverage --timeout 100000",
-    "coverage-publish": "node --max-old-space-size=8192 $(npm bin)/aegir coverage --provider coveralls --timeout 100000"
+    "release": "aegir release",
+    "release-minor": "aegir release --type minor",
+    "release-major": "aegir release --type major",
+    "coverage": "aegir coverage --timeout 100000",
+    "coverage-publish": "aegir coverage --provider coveralls --timeout 100000"
   },
   "dependencies": {
     "async": "^2.6.0",
@@ -65,7 +65,7 @@
     "url": "https://github.com/ipfs/js-ipfs-api"
   },
   "devDependencies": {
-    "aegir": "^13.0.0",
+    "aegir": "https://github.com/ipfs/aegir#karma-webpack-bundle-alt2",
     "chai": "^4.1.2",
     "dirty-chai": "^2.0.1",
     "eslint-plugin-react": "^7.6.1",
@@ -73,7 +73,7 @@
     "gulp": "^3.9.1",
     "interface-ipfs-core": "~0.51.0",
     "hapi": "^17.2.0",
-    "ipfsd-ctl": "~0.28.0",
+    "ipfsd-ctl": "~0.29.1",
     "pre-commit": "^1.2.2",
     "socket.io": "^2.0.4",
     "socket.io-client": "^2.0.4",
